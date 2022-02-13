@@ -1,18 +1,24 @@
 import Navbar from './Navbar'
-import Search from './Search'
+import Results from './Results'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
 
   // CHANGE LATER
-  document.body.style.maxWidth = "1250px";
+  document.body.style.maxWidth = "1200px";
   document.body.style.margin = "0 auto";
 
   return (
-    <div>
-      <Navbar></Navbar>
-      <Search></Search>
-    </div>
+    <Router>
+        <Navbar></Navbar>
+        <Routes>
+        <Route exact path='/' element={<Results />} />
+        </Routes>
+    </Router>
   );
 }
 
 export default App;
+
+
+/* <Route path='/results' element={<Results />} /> */
