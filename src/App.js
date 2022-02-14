@@ -1,6 +1,7 @@
 import Navbar from './Navbar'
 import Results from './Results'
 import Home from './Home'
+//import Slot from './Slot'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
         <Navbar></Navbar>
         <Routes>
             <Route exact path='/' element={<Home />} />
-            <Route exact path='/results' element={<Results />} /> 
-            <Route path='/results/:value' element={<Results />} />
-            {/* learn how /:value works */}
-        </Routes>
+            <Route path='/results'>
+              <Route path='/results/:value' element={<Results />} />
+              {/*<Route path='/results/:value/:slot' element={<Slot />}*/}
+            </Route>
+         </Routes>
     </Router>
   );
 }
