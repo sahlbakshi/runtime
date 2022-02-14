@@ -1,8 +1,6 @@
-import Search from "../Search";
-
 const Home = () => {
     return (
-        <Search></Search>
+        <div></div>
     )
 }
 
