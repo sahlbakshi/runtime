@@ -1,8 +1,7 @@
-import { fetchID } from '../fetch'
+import { fetchID, fetchConfig } from '../fetch'
 
 const Card = (props) => {
     const { id, option } = props;
-    //console.log(fetchID(id, option));
     //image
     //title
     //date

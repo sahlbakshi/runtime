@@ -9,8 +9,6 @@ function App() {
   document.body.style.maxWidth = "1200px";
   document.body.style.margin = "0 auto";
 
-  // PUT SOMEHITNG FOR PLAIN RESULTS  
-
   return (
     <Router>
         <Navbar></Navbar>
