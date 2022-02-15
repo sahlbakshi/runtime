@@ -9,10 +9,10 @@ function App() {
   // CHANGE LATER
   document.body.style.maxWidth = "1200px";
   document.body.style.margin = "0 auto";
+  //document.body.style.color = "white";
+  //document.body.style.background = "black";
 
-  // Try to put the navbar in the repective pages
-  // not best solution but can work
-  
+
   return (
     <Router>
         <Navbar></Navbar>
