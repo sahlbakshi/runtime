@@ -7,22 +7,36 @@ const Results = () => {
     let { value } = useParams();
     const options = ['movie', 'tv'];
     let [ option, setOption ] = useState(options[0]);
-    let [ result, setResult ] = useState([]);
+    let [ result, setResult ] = useState();
     let [ page, setPage ] = useState(1);
-
-    const handleMovieClick = () => {setOption('movie')}
-    const handleTVShowClick = () => {setOption('tv')}
     
-    // FIX THE FETCH FUNCTIONS
-    // TO HANDLE REQUEST FAILED N ERROR 404 CANT FIND
+    //mPages
+    //tPages
+    //mAmt
+    //tAmt
+
+    const handleMovieClick = () => {
+        console.log(value);
+        fetchArrayByPage(value, page, 'movie').then(res => {
+            setResult(res);
+            setOption('movie');
+        });
+    }
+
+    const handleTVShowClick = () => {
+        fetchArrayByPage(value, page, 'tv').then(res => {
+            setResult(res);
+            setOption('tv');
+        });
+    }
+
     useEffect(() => {
         fetchArrayByPage(value, page, option).then(res => setResult(res))
-    }, [page, option, value])
-
-    console.log(result);
+    }, [value])
+    
     console.log(value);
+    console.log(result);
 
-    // HAVE TO PUT PAGE FUNCTION YET
     return (
         <div className="results-container">
             <div>
@@ -37,7 +51,6 @@ const Results = () => {
                 </div>
 
                 <div className='pages'>
-
                 </div>
             </div>
         </div>

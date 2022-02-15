@@ -1,5 +1,6 @@
 import './navbar.scss'
 import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 
 const Navbar = () => {
 
@@ -7,10 +8,10 @@ const Navbar = () => {
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             let value = event.target.value;
-            navigate(`/results/${value}`);
+            navigate(`/results/${value}`); 
         }
     }
-
+    
     return (
         <nav className='navigation'>
             <div className='left-slot'>

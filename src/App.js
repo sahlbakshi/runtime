@@ -10,6 +10,9 @@ function App() {
   document.body.style.maxWidth = "1200px";
   document.body.style.margin = "0 auto";
 
+  // Try to put the navbar in the repective pages
+  // not best solution but can work
+  
   return (
     <Router>
         <Navbar></Navbar>

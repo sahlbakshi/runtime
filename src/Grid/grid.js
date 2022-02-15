@@ -4,7 +4,6 @@ const Grid = (props) => {
       
     const { data, option } = props;
 
-
     const card = (id) => {
         fetchID(id, option)
         .then(res => {
@@ -23,11 +22,11 @@ const Grid = (props) => {
     }
 
     return (
-        <div>
+        <ul>
             {card(data[0])}
             {data.map((id) => 
             <li key={id}>{card(id)}</li>)}
-        </div>
+        </ul>
     );
 }
 
