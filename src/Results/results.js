@@ -6,10 +6,8 @@ import './results.scss'
 
 const Results = () => {
 
-    //mPages
-    //tPages
-    //mAmt
-    //tAmt
+    // mPages, tPages
+    // mAmt, tAmt
 
     let { value } = useParams();
     const options = ['movie', 'tv'];
@@ -35,8 +33,6 @@ const Results = () => {
     useEffect(() => {
         fetchArrayByPage(value, page, option).then(res => {setResult(res)});
     }, [value])
-
-    console.log(result);
 
     return (
         <div className="results-container">

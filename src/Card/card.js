@@ -2,9 +2,8 @@ import { useState } from "react";
 import { fetchID } from "../fetch";
 
 const Card = (props) => {
-
+    
     const {id, option} = props;
-
     const [title, setTitle ] = useState();
     const [date, setDate ] = useState();
     const [path, setPath] = useState();
@@ -21,7 +20,6 @@ const Card = (props) => {
                 setPath(`http://image.tmdb.org/t/p/w185/${res.poster_path}`);
             }
         })
-
         return (
             <div>
             <img src={path} alt="" style={{width: "200px"}}></img>

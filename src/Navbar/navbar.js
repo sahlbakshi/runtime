@@ -32,6 +32,7 @@ const Navbar = () => {
     );
 }
 
+export default Navbar;
 
     /*
     let location = useLocation();
@@ -94,5 +95,3 @@ const Navbar = () => {
         </div>
     )
     */
-
-export default Navbar;
